@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h1>MONNER</h1>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Stats</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <div class="box">
+            <header>
+                <h2>Total Sales</h2>
+            </header>
+            <section>
+                <canvas id="totalSalesChart" width="400" height="200"></canvas>
+            </section>
+        </div>
+
+        <div class="box">
+            <header>
+                <h2>Total Purchases</h2>
+            </header>
+            <section>
+                <canvas id="totalPurchasesChart" width="400" height="200"></canvas>
+            </section>
+        </div>
+
+        <div class="box">
+            <header>
+                <h2>Total Orders</h2>
+            </header>
+            <section>
+                <canvas id="totalOrdersChart" width="400" height="200"></canvas>
+            </section>
+        </div>
+
+        <div class="box">
+            <header>
+                <h2>Total Growth</h2>
+            </header>
+            <section>
+                <canvas id="totalGrowthChart" width="400" height="200"></canvas>
+            </section>
+        </div>
+
+        <div class="box">
+            <header>
+                <h2>Users</h2>
+            </header>
+            <section>
+            </section>
+        </div>
+
+        <div class="box">
+            <header>
+                <h2>Projects</h2>
+            </header>
+            <section>
+            </section>
+        </div>
+
+        <div class="box">
+            <header>
+                <h2>Downloads</h2>
+            </header>
+            <section>
+            </section>
+        </div>
+
+        <div class="box">
+            <header>
+                <h2>Tickets</h2>
+            </header>
+            <section>
+            </section>
+        </div>
+
+        <div class="box">
+            <header>
+                <h2>Updates</h2>
+            </header>
+            <section>
+            </section>
+        </div>
+    </main>
+    <script>
+        var ctx1 = document.getElementById('totalSalesChart').getContext('2d');
+        var totalSalesChart = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
+                datasets: [{
+                    label: 'Total Sales',
+                    data: [100, 120, 90, 150, 110],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
